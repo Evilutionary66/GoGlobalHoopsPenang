@@ -95,7 +95,11 @@ app.post('/webhook', express.raw({ type: 'application/json' }), async (req, res)
 });
 
 // Start server
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-    console.log(`Stripe configured with key ending in: ${process.env.STRIPE_SECRET_KEY?.slice(-4) || 'N/A'}`);
-});
+if (process.env.NODE_ENV !== 'production') {
+    app.listen(PORT, () => {
+        console.log(`Server running on port ${PORT}`);
+        console.log(`Stripe configured with key ending in: ${process.env.STRIPE_SECRET_KEY?.slice(-4) || 'N/A'}`);
+    });
+}
+
+module.exports = app;
