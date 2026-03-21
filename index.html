@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoGlobal Hoops Penang - Weekend Basketball Camp</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <nav class="navbar">
+            <a href="#" class="logo">🏀 GoGlobal Hoops Penang</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#schedule">Schedule</a></li>
+                <li><a href="#register" class="btn-primary">Register Now</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero-content">
+            <h1>Elevate Your Game on the Island of Dreams</h1>
+            <p>Weekend basketball training camps in Penang, Malaysia - Where skill meets paradise</p>
+            <div class="cta-buttons">
+                <a href="#register" class="btn-large">Secure Your Spot - RM 299</a>
+            </div>
+        </div>
+
+        <!-- Island Theme Elements -->
+        <div class="island-elements">
+            <div class="palm-leaf"></div>
+            <div class="sunset-gradient"></div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>Why Choose Our Camp?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="icon">🌴</span>
+                    <h3>Tropical Setting</h3>
+                    <p>Train in the beautiful outdoors of Penang with stunning island views</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🏀</span>
+                    <h3>Expert Coaches</h3>
+                    <p>Certified coaches from top Malaysian and international programs</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🤝</span>
+                    <h3>Community Spirit</h3>
+                    <p>Build friendships with players from around the world</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="schedule-section">
+        <div class="container">
+            <h2>This Weekend's Sessions</h2>
+            <div class="sessions-grid">
+                <div class="session-card">
+                    <span class="date-badge">Saturday, March 28</span>
+                    <h3>Morning Clinic (9 AM - 12 PM)</h3>
+                    <p>Ball handling, shooting fundamentals, and defensive positioning</p>
+                    <span class="price">RM 299</span>
+                </div>
+                <div class="session-card">
+                    <span class="date-badge">Saturday, March 28</span>
+                    <h3>Afternoon Game (1 PM - 5 PM)</h3>
+                    <p>Full-court scrimmages and tactical drills</p>
+                    <span class="price">RM 299</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="registration-section">
+        <div class="container">
+            <h2>Secure Your Spot Today</h2>
+            <p>Limited spots available for this weekend's camp!</p>
+            
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe">
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+60 1234 5678">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Age Group *</label>
+                    <select id="age" name="age" required>
+                        <option value="">Select Age Group</option>
+                        <option value="kids">Kids (6-12 years)</option>
+                        <option value="teens">Teens (13-17 years)</option>
+                        <option value="adults">Adults (18+ years)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="session">Session Selection *</label>
+                    <select id="session" name="session" required multiple>
+                        <option value="morning">Saturday Morning Clinic (9 AM - 12 PM)</option>
+                        <option value="afternoon">Saturday Afternoon Game (1 PM - 5 PM)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-submit">Proceed to Payment →</button>
+            </form>
+
+            <div id="payment-result"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 GoGlobal Hoops Penang. All rights reserved.</p>
+            <p>📍 Located in the heart of Penang, Malaysia | 🌊 Island Paradise Awaits</p>
+        </div>
+    </footer>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="app.js"></script>
+</body>
+</html>
